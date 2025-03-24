@@ -147,7 +147,7 @@ included in the `teacher_evals_codebook.pdf`.
 
 **1. Load the appropriate R packages for your analysis.**
 
-```{r}
+```{r, include = FALSE}
 #| label: setup
 # code chunk for loading packages
 library(tidyverse)
@@ -218,7 +218,8 @@ teacher_evals_clean <- evals |>
 ```{r}
 #| label: unique-courses
 # code chunk for Q6
-distinct(teacher_evals_clean, course_id)
+teacher_evals_clean |> 
+distinct(course_id) 
 distinct(teacher_evals_clean, teacher_id)
 ```
 
